@@ -22,7 +22,7 @@ const database = {
       github: 'https://github.com/Aiiexpert'
     },
     brandImage: '/images/brnd2.png',
-    aboutImage: '/images/about-img.jpg',
+    aboutImage: '/images/about-image.jpg',
     aboutImageLg: '/images/about-image-lg.jpeg',
     cvfile: '/files/MERN_Ali_Hamza.pdf'
   },
