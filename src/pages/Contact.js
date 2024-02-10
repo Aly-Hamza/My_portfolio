@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import Sectiontitle from "../components/Sectiontitle";
 import Spinner from "../components/Spinner";
+import emailjs from 'emailjs-com';
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState([]);
@@ -18,32 +19,23 @@ function Contact() {
   });
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-    if (!formdata.name) {
-      setError(true);
-      setMessage("Name is required");
-    } else if (!formdata.email) {
-      setError(true);
-      setMessage("Email is required");
-    } else if (!formdata.subject) {
-      setError(true);
-      setMessage("Subject is required");
-    } else if (!formdata.message) {
-      setError(true);
-      setMessage("Message is required");
-    } else {
-      setError(false);
-      setMessage("You message has been sent!!!");
-    }
-  };
+  useEffect(() => {
+    axios.get("/api/contactinfo").then((response) => {
+      setPhoneNumbers(response.data.phoneNumbers);
+      setEmailAddress(response.data.emailAddress);
+      setAddress(response.data.address);
+    });
+  }, []);
+
   const handleChange = (event) => {
     setFormdata({
       ...formdata,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
+
   const numberFormatter = (number) => {
     const phnNumber = number;
     return phnNumber;
@@ -59,13 +51,38 @@ function Contact() {
     }
   };
 
-  useEffect(() => {
-    axios.get("/api/contactinfo").then((response) => {
-      setPhoneNumbers(response.data.phoneNumbers);
-      setEmailAddress(response.data.emailAddress);
-      setAddress(response.data.address);
-    });
-  }, []);
+  const submitHandler = (event) => {
+    event.preventDefault();
+    if (!formdata.name || !formdata.email || !formdata.subject || !formdata.message) {
+      setError(true);
+      setMessage("All fields are required");
+      return;
+    }
+    const templateParams = {
+      to_name: 'Recipient Name',
+      from_name: 'Sender Name',
+      message: 'This is the message content.',
+    };
+    setLoading(true);
+    emailjs.sendForm('service_7yrl9j6', 'template_jcr7y6i', event.target, '7AkxdU1-tc3yKb-Dy')
+      .then((result) => {
+        console.log('Email sent successfully');
+        setLoading(false);
+        setError(false);
+        setMessage('Your message has been sent!');
+        setFormdata({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      }, (error) => {
+        console.error('Failed to send email:', error);
+        setLoading(false);
+        setError(true);
+        setMessage('Failed to send email. Please try again later.');
+      });
+  };
 
   return (
     <Layout>
@@ -147,7 +164,7 @@ function Contact() {
                   {handleAlerts()}
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 mt-20  " style={{ marginTop: '60px' }}>
                 <div className="mi-contact-info">
                   {!phoneNumbers ? null : (
                     <div className="mi-contact-infoblock">

@@ -156,17 +156,19 @@ Get in touch, and we can bring your idea to life.
             </div>
           </div>
         </div>
-        <div className="mi-service-area mi-section pt-12">
-    <div className="container">
-        <Sectiontitle title="Services" />
-        <div className="mi-service-wrapper flex flex-wrap justify-center items-center h-full">
-            {services.map((service) => (
-                <div className="flex flex-col justify-center items-center p-4" key={service.title}>
-                    <Service content={service} />
-                </div>
-            ))}
-        </div>
+        <div className="mi-service-area mi-section pt-8">
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', width: '80%' }}>
+    <Sectiontitle title="Services" />
+    <div className="mi-service-wrapper flex flex-wrap justify-start items-center h-full" style={{ width: '100%' }}>
+        {services.map((service) => (
+            <div className="flex flex-col justify-center items-center p-4" key={service.title} style={{ width: '80%' }}>
+                <Service content={service} />
+            </div>
+        ))}
     </div>
+</div>
+
+
 </div>
 
       </Suspense>
