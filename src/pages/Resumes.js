@@ -27,10 +27,10 @@ function Resumes() {
   return (
     <Layout>
       <Helmet>
-        <title>Resume - Chester React Personal Portfolio Template</title>
+        <title>Ali Hamza portfolio</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Resume Page"
+          content="Resumes-Ali Hamza portfolio"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

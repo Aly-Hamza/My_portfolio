@@ -61,7 +61,7 @@ function About() {
         <title>Personal Portfolio </title>
         <meta
           name="description"
-          content="Ali Hamza portfolio"
+          content="About-  Ali Hamza portfolio"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
