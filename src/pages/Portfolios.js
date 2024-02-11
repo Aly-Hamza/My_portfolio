@@ -37,7 +37,7 @@ function Portfolios() {
   return (
     <Layout>
       <Helmet>
-        <title>Ali Hamza Portfolio</title>
+        <title>Portfolio-Ali Hamza Portfolio</title>
         <meta
           name="description"
           content="es"

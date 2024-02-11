@@ -58,7 +58,7 @@ function About() {
   return (
     <Layout>
       <Helmet>
-        <title>Personal Portfolio </title>
+        <title>About- Ali Hamza portfolio </title>
         <meta
           name="description"
           content="About-  Ali Hamza portfolio"

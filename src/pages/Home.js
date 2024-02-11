@@ -18,7 +18,7 @@ function Home({ lightMode }) {
   return (
     <Layout>
       <Helmet>
-        <title> Personal Portfolio </title>
+        <title> Home- Ali Hamza portfolio </title>
         <meta
           name="description"
           content="Home-Ali Hamza portfolio"

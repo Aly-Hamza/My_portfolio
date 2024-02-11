@@ -27,7 +27,7 @@ function Resumes() {
   return (
     <Layout>
       <Helmet>
-        <title>Ali Hamza portfolio</title>
+        <title>Resume-Ali Hamza portfolio</title>
         <meta
           name="description"
           content="Resumes-Ali Hamza portfolio"
