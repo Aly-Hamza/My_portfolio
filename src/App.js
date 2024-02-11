@@ -3,7 +3,6 @@ import * as Icon from "react-feather";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import About from "./pages/About";
-import BlogDetails from "./pages/BlogDetails";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Notfound from "./pages/Notfound";
@@ -45,7 +44,6 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="resume" element={<Resumes />} />
         <Route path="portfolios" element={<Portfolios />} />
-        <Route path="blogs/:id/:title" element={<BlogDetails />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<Notfound />} />
       </Routes>

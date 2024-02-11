@@ -71,24 +71,17 @@ const database = {
     }
   ],
   portfolios: [
+  
     {
       id: 1,
-      title: "T-shirt Mockup",
-      subtitle: "A beautiful t-shirt mockup.",
-      imageUrl: "/images/portfolio-image-1.jpg",
-      largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
-      url: 'https://dribbble.com'
-    },
-    {
-      id: 2,
-      title: "Coffee Mug",
-      subtitle: "Awesome coffee mug design.",
-      imageUrl: "/images/portfolio-image-4.jpg",
+      title: "fitclub-body",
+      subtitle: "React Js fitclub body gym website",
+      imageUrl: "/images/fitclub.png",
       largeImageUrl: [
-        "/images/portfolio-image-4-lg.jpg",
-        "/images/portfolio-image-4-lg2.jpg"
+        "/images/fitclub.png",
+        "/images/fitclub.png"
       ],
-      url: 'https://facebook.com'
+      url: 'https://fitclub-body.netlify.app/'
     },
 
   ],

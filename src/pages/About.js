@@ -61,7 +61,7 @@ function About() {
         <title>Personal Portfolio </title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template About Page"
+          content="Ali Hamza portfolio"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
