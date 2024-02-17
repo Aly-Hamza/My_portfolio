@@ -83,6 +83,17 @@ const database = {
       ],
       url: 'https://fitclub-body.netlify.app/'
     },
+    {
+      id: 2,
+      title: "Qubitars",
+      subtitle: "Based on React Js ",
+      imageUrl: "/images/qubitars.png",
+      largeImageUrl: [
+        "/images/qubitars.png",
+        "/images/qubitars.png"
+      ],
+      url: 'https://qubitars-figma.netlify.app/'
+    },
 
   ],
   experience: {
