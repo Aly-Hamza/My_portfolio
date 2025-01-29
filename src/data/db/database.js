@@ -17,7 +17,7 @@ const database = {
       pinterest: '',
       behance: '',
       linkedin: 'https://www.linkedin.com/in/alyhamza/',
-      instagram: 'https://www.instagram.com/malik_ali469?igsh=MTc5MzFjMmhjZTVkMg%3D%3D&utm_source=qr/',
+      instagram: 'https://www.instagram.com/malik_aly4/',
       dribbble: '',
       github: 'https://github.com/Aiiexpert'
     },
